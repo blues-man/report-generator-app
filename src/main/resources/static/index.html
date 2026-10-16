@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acme Report Generator</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f5f5f5; color: #333; }
+        .header { background: #2c5282; color: white; padding: 20px 40px; }
+        .header h1 { font-size: 24px; font-weight: 600; }
+        .header .subtitle { font-size: 14px; color: #a3c4e8; margin-top: 4px; }
+        .content { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+        .card { background: white; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); padding: 30px; margin-bottom: 20px; }
+        .card h2 { font-size: 18px; margin-bottom: 16px; color: #2c5282; }
+        .status { display: inline-block; background: #e6f4ea; color: #1e7e34; padding: 4px 12px; border-radius: 12px; font-size: 13px; font-weight: 500; }
+        table { width: 100%; border-collapse: collapse; margin-top: 16px; }
+        th { text-align: left; padding: 10px 12px; background: #f8f9fa; border-bottom: 2px solid #dee2e6; font-size: 13px; color: #666; text-transform: uppercase; }
+        td { padding: 10px 12px; border-bottom: 1px solid #eee; font-size: 14px; }
+        .footer { text-align: center; padding: 30px; color: #999; font-size: 13px; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>ACME INC. REPORT GENERATOR</h1>
+        <div class="subtitle">Compliance &amp; Analytics Reporting Service</div>
+    </div>
+    <div class="content">
+        <div class="card">
+            <h2>System Status</h2>
+            <p><span class="status">Online</span></p>
+        </div>
+        <div class="card">
+            <h2>Scheduled Reports</h2>
+            <table>
+                <tr><th>Report</th><th>Schedule</th><th>Last Run</th><th>Status</th></tr>
+                <tr><td>Q4 Compliance Summary</td><td>Weekly</td><td>2026-10-14</td><td>Completed</td></tr>
+                <tr><td>User Activity Audit</td><td>Daily</td><td>2026-10-16</td><td>Completed</td></tr>
+                <tr><td>Security Posture Report</td><td>Monthly</td><td>2026-10-01</td><td>Completed</td></tr>
+                <tr><td>License Usage Analytics</td><td>Weekly</td><td>2026-10-14</td><td>Completed</td></tr>
+            </table>
+        </div>
+        <div class="card">
+            <h2>API Endpoints</h2>
+            <table>
+                <tr><th>Endpoint</th><th>Method</th><th>Description</th></tr>
+                <tr><td>/api/users</td><td>GET</td><td>List all users</td></tr>
+                <tr><td>/api/users</td><td>POST</td><td>Create a new user</td></tr>
+                <tr><td>/api/users/{id}</td><td>GET</td><td>Get user by ID</td></tr>
+            </table>
+        </div>
+    </div>
+    <div class="footer">Acme Inc. Report Generator &copy; 2026 — Internal System</div>
+</body>
+</html>
