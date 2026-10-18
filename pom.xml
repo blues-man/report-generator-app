@@ -130,6 +130,26 @@
     <build>
         <plugins>
             <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-failsafe-plugin</artifactId>
+          <configuration>
+            <!-- spring-boot-maven-plugin repackages the jar with classes under
+                 BOOT-INF/classes, where failsafe cannot find
+                 @SpringBootConfiguration. Scan the plain output directory. -->
+            <classesDirectory>${project.build.outputDirectory}</classesDirectory>
+          </configuration>
+              <!-- Integration tests (*IT) boot the full Spring context. Bound to
+                   verify so the PaC pipeline picks them up with no extra goal. -->
+              <executions>
+                <execution>
+                  <goals>
+                    <goal>integration-test</goal>
+                    <goal>verify</goal>
+                  </goals>
+                </execution>
+              </executions>
+            </plugin>
+            <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>${spring-boot.version}</version>
